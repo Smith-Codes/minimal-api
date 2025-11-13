@@ -19,6 +19,7 @@ public class VeiculosService : IVeiculoService
     public void Delete(Veiculo veiculo)
     {
         _context.Veiculos.Remove(veiculo);
+        _context.SaveChanges();
     }
 
     public List<Veiculo> GetVeiculos(int? pag = 1, string? nome = null, string? marca = null)
